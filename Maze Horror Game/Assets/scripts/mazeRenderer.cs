@@ -6,11 +6,11 @@ public class mazeRenderer : MonoBehaviour
 {
 
     [SerializeField]
-    [Range(1, 1000)]
+    [Range(1, 50)]
     private int width = 10;
 
     [SerializeField]
-    [Range(1, 1000)]
+    [Range(1, 50)]
     private int height = 10;
 
     [SerializeField]
@@ -33,14 +33,14 @@ public class mazeRenderer : MonoBehaviour
     {
 
         var floor = Instantiate(floorPrefab, transform);
-        floor.localScale = new Vector3(width, 1, height);
+        floor.localScale = new Vector3(width * size, 1, height * size);
 
         for (int i = 0; i < width; ++i)
         {
             for (int j = 0; j < height; ++j)
             {
                 var cell = maze[i, j];
-                var position = new Vector3(-width / 2 + i, 0, -height / 2 + j);
+                var position = new Vector3((-width / 2 + i) * size, 0, (-height / 2 + j) * size);
 
                 if (cell.HasFlag(WallState.UP))
                 {

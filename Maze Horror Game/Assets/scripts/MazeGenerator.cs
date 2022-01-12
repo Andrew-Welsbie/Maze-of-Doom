@@ -48,9 +48,9 @@ public static class MazeGenerator
         // here we make changes
         var rng = new System.Random(/*seed*/);
         var positionStack = new Stack<Position>();
-        var position = new Position { X = rng.Next(0, width), Y = rng.Next(0, height) };
+        var position = new Position { X = width/2, Y = height/2 };
 
-        maze[position.X, position.Y] |= WallState.VISITED;  // 1000 1111
+        //maze[position.X, position.Y] |= WallState.VISITED;  // 1000 1111
         positionStack.Push(position);
 
         while (positionStack.Count > 0)
