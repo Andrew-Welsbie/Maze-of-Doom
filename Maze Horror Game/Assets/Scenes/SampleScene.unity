@@ -2681,7 +2681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 50
   height: 50
-  size: 1
+  size: 10
   wallPrefab: {fileID: 8221210859985750975, guid: 6c241a6bfc7bc3f4b9bdb4851c4c7b77, type: 3}
   floorPrefab: {fileID: 8775727868939575758, guid: 92336cc9a7062d14fa1db76010d229b9, type: 3}
 --- !u!4 &1226608341
