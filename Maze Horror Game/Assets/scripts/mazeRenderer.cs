@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeRenderer : MonoBehaviour
+public class mazeRenderer : MonoBehaviour
 {
 
     [SerializeField]
-    [Range(1, 50)]
+    [Range(1, 1000)]
     private int width = 10;
 
     [SerializeField]
-    [Range(1, 50)]
+    [Range(1, 1000)]
     private int height = 10;
 
     [SerializeField]
