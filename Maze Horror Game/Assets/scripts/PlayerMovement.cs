@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
 
-    public float speed = 6f;
+    public float speed = 10f;
     public float gravity = -9.8f;
     public float jumpHeight = 3f;
 
@@ -26,16 +26,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("left shift") && speed < 27 && canChange)
+        if (Input.GetKey("left shift") && speed <= 210 && canChange)
         {
             Debug.Log("shift down");
             if (!isSprinting)
             {
-                speed += 20f;
+                speed += 200f;
             }
             else if (isSprinting)
             {
-                speed -= 20;
+                speed -= 200;
             }
             canChange = false;
             isSprinting = !isSprinting;
